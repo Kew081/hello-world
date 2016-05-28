@@ -1,0 +1,14 @@
+i = 99
+while i > 1 :
+    y = str(i)
+    print (y + " bottles of beer on the wall")
+    print (y + " bottles of beer")
+    print ("You take one down and pass it around ")
+    i = i - 1
+    y = str(i)
+    print (y + " bottles of beer on the wall")
+if i == 1 :
+    y = str(i)
+    print (y + " bottle of beer on the wall")
+    print (y + " bottle of beer")
+    print ("You take it down and pass out ")
