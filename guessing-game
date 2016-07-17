@@ -1,0 +1,37 @@
+from random import randint
+from time import sleep
+
+print('Hello, and welcome to guess a number.') 
+print('Guess what number I am thinking anywhere between 1 and 100? ')
+
+
+def game():
+    x = 0
+    guess = 0
+    ai = randint(1,101)
+    while ai != x:
+        x = int(input("Pick a number between 1 and 100? "))
+        if x > ai:
+            print("Too high!")
+            guess += 1
+            sleep(.5)
+        elif x < ai:
+            print("Too low!")
+            guess += 1
+            sleep(.5)
+        else:
+            break
+    sleep(.5)
+    print ('Congratulations ' + str(x) + " is the number!")
+    sleep(4)
+                
+    print("It only took you " + str(guess) + " number of guesses!")
+    
+    sleep(2)
+    y = raw_input("Would you like to play again y or n ")
+    if y == "y":
+        game()
+    else:
+        print("Thanks for playing!")
+
+game()
