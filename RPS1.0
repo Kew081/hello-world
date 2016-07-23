@@ -1,0 +1,55 @@
+from random import randint
+from time import sleep
+
+print("Welcome to rock, paper, scissor!")
+y = "y"
+playerwin = 0
+aiwin = 0
+selections = ["rock", "paper", "scissor"]
+while y == "y":
+    x = raw_input("Choose your weapon!!! ")
+    aiturn = selections[randint(0,2)]
+    print('Rock')
+    sleep(.75)
+    print('Paper')
+    sleep(.75)
+    print('Scissor')
+    sleep(.75)
+    print('Shoot!')
+    sleep(.75)
+    if x == "rock":
+        if aiturn == "scissor":
+            print("Rock beats scissors!")
+            playerwin += 1
+        elif aiturn == "paper":
+            print("Paper beats rock!")
+            aiwin += 1
+        else:
+            print("Tie!")
+   
+    elif x == "paper":
+        if aiturn == "scissor":
+            print("Scissors beats paper!")
+            aiwin += 1
+        elif aiturn == "paper":
+            print("Tie!")
+        else:
+            print("Paper beats rock!")
+            playerwin += 1
+    elif x == "scissor":
+        if aiturn == "scissor":
+            print("Tie!")
+        elif aiturn == "paper":
+            print("Scissor beats paper!")
+            playerwin += 1
+        else:
+            print("Rock beats scissors!")
+            aiwin += 1
+    else:
+        print("Come on we all know how rock, paper, scissors works!!!")
+    
+    sleep(.75)
+    print("The score is " + str(playerwin) + " to " + str(aiwin) ) 
+    sleep(2)         
+    y = raw_input("Would you like to play again y or n ")
+print("Thanks for Playing!")
